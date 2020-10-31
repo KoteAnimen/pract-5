@@ -35,20 +35,25 @@
             this.listBox = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.markAuto = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.countCylinders = new System.Windows.Forms.NumericUpDown();
-            this.powerAuto = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.AddButton = new System.Windows.Forms.Button();
-            this.DeleteButton = new System.Windows.Forms.Button();
             this.ChangeButton = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.powerAuto = new System.Windows.Forms.NumericUpDown();
+            this.countCylinders = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.markAuto = new System.Windows.Forms.TextBox();
+            this.добавитьТолькоСМаркойToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьТолькоЦилиндрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьМаркуИМощностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьМаркуИЦилиндрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьЦилиндрыИМощьностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.countCylinders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerAuto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countCylinders)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -59,12 +64,18 @@
             this.Exit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(484, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(794, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // файлToolStripMenuItem
             // 
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.добавитьТолькоСМаркойToolStripMenuItem,
+            this.добавитьТолькоЦилиндрыToolStripMenuItem,
+            this.добавитьМаркуИМощностьToolStripMenuItem,
+            this.добавитьМаркуИЦилиндрыToolStripMenuItem,
+            this.добавитьЦилиндрыИМощьностьToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
@@ -78,7 +89,7 @@
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(54, 20);
+            this.Exit.Size = new System.Drawing.Size(53, 20);
             this.Exit.Text = "Выход";
             // 
             // listBox
@@ -86,7 +97,7 @@
             this.listBox.FormattingEnabled = true;
             this.listBox.Location = new System.Drawing.Point(6, 19);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(203, 381);
+            this.listBox.Size = new System.Drawing.Size(509, 381);
             this.listBox.TabIndex = 1;
             // 
             // groupBox1
@@ -95,7 +106,7 @@
             this.groupBox1.Controls.Add(this.listBox);
             this.groupBox1.Location = new System.Drawing.Point(12, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(215, 407);
+            this.groupBox1.Size = new System.Drawing.Size(525, 407);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Автомобили";
@@ -111,60 +122,30 @@
             this.groupBox2.Controls.Add(this.countCylinders);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.markAuto);
-            this.groupBox2.Location = new System.Drawing.Point(233, 31);
+            this.groupBox2.Location = new System.Drawing.Point(543, 31);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(239, 407);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Параметры автомобиля";
             // 
-            // markAuto
+            // ChangeButton
             // 
-            this.markAuto.Location = new System.Drawing.Point(6, 45);
-            this.markAuto.Name = "markAuto";
-            this.markAuto.Size = new System.Drawing.Size(156, 20);
-            this.markAuto.TabIndex = 0;
+            this.ChangeButton.Location = new System.Drawing.Point(121, 338);
+            this.ChangeButton.Name = "ChangeButton";
+            this.ChangeButton.Size = new System.Drawing.Size(80, 25);
+            this.ChangeButton.TabIndex = 8;
+            this.ChangeButton.Text = "Изменить";
+            this.ChangeButton.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // DeleteButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Марка автомобиля";
-            // 
-            // countCylinders
-            // 
-            this.countCylinders.Location = new System.Drawing.Point(6, 99);
-            this.countCylinders.Name = "countCylinders";
-            this.countCylinders.Size = new System.Drawing.Size(156, 20);
-            this.countCylinders.TabIndex = 2;
-            // 
-            // powerAuto
-            // 
-            this.powerAuto.Location = new System.Drawing.Point(6, 149);
-            this.powerAuto.Name = "powerAuto";
-            this.powerAuto.Size = new System.Drawing.Size(156, 20);
-            this.powerAuto.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Число цилиндров";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 133);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Мощность";
+            this.DeleteButton.Location = new System.Drawing.Point(35, 369);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(166, 25);
+            this.DeleteButton.TabIndex = 7;
+            this.DeleteButton.Text = "Удалить из списка";
+            this.DeleteButton.UseVisualStyleBackColor = true;
             // 
             // AddButton
             // 
@@ -176,29 +157,94 @@
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // DeleteButton
+            // label3
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(35, 369);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(166, 25);
-            this.DeleteButton.TabIndex = 7;
-            this.DeleteButton.Text = "Удалить из списка";
-            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 133);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Мощность";
             // 
-            // ChangeButton
+            // label2
             // 
-            this.ChangeButton.Location = new System.Drawing.Point(121, 338);
-            this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(80, 25);
-            this.ChangeButton.TabIndex = 8;
-            this.ChangeButton.Text = "Изменить";
-            this.ChangeButton.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Число цилиндров";
+            // 
+            // powerAuto
+            // 
+            this.powerAuto.Location = new System.Drawing.Point(6, 149);
+            this.powerAuto.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.powerAuto.Name = "powerAuto";
+            this.powerAuto.Size = new System.Drawing.Size(156, 20);
+            this.powerAuto.TabIndex = 3;
+            // 
+            // countCylinders
+            // 
+            this.countCylinders.Location = new System.Drawing.Point(6, 99);
+            this.countCylinders.Name = "countCylinders";
+            this.countCylinders.Size = new System.Drawing.Size(156, 20);
+            this.countCylinders.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Марка автомобиля";
+            // 
+            // markAuto
+            // 
+            this.markAuto.Location = new System.Drawing.Point(6, 45);
+            this.markAuto.Name = "markAuto";
+            this.markAuto.Size = new System.Drawing.Size(156, 20);
+            this.markAuto.TabIndex = 0;
+            // 
+            // добавитьТолькоСМаркойToolStripMenuItem
+            // 
+            this.добавитьТолькоСМаркойToolStripMenuItem.Name = "добавитьТолькоСМаркойToolStripMenuItem";
+            this.добавитьТолькоСМаркойToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.добавитьТолькоСМаркойToolStripMenuItem.Text = "Добавить только с маркой";
+            // 
+            // добавитьТолькоЦилиндрыToolStripMenuItem
+            // 
+            this.добавитьТолькоЦилиндрыToolStripMenuItem.Name = "добавитьТолькоЦилиндрыToolStripMenuItem";
+            this.добавитьТолькоЦилиндрыToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.добавитьТолькоЦилиндрыToolStripMenuItem.Text = "Добавить только цилиндры";
+            // 
+            // добавитьМаркуИМощностьToolStripMenuItem
+            // 
+            this.добавитьМаркуИМощностьToolStripMenuItem.Name = "добавитьМаркуИМощностьToolStripMenuItem";
+            this.добавитьМаркуИМощностьToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.добавитьМаркуИМощностьToolStripMenuItem.Text = "Добавить марку и мощность";
+            // 
+            // добавитьМаркуИЦилиндрыToolStripMenuItem
+            // 
+            this.добавитьМаркуИЦилиндрыToolStripMenuItem.Name = "добавитьМаркуИЦилиндрыToolStripMenuItem";
+            this.добавитьМаркуИЦилиндрыToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.добавитьМаркуИЦилиндрыToolStripMenuItem.Text = "Добавить марку и цилиндры";
+            // 
+            // добавитьЦилиндрыИМощьностьToolStripMenuItem
+            // 
+            this.добавитьЦилиндрыИМощьностьToolStripMenuItem.Name = "добавитьЦилиндрыИМощьностьToolStripMenuItem";
+            this.добавитьЦилиндрыИМощьностьToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.добавитьЦилиндрыИМощьностьToolStripMenuItem.Text = "Добавить цилиндры и мощность ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 450);
+            this.ClientSize = new System.Drawing.Size(794, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -211,8 +257,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.countCylinders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerAuto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countCylinders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,6 +282,11 @@
         private System.Windows.Forms.NumericUpDown countCylinders;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox markAuto;
+        private System.Windows.Forms.ToolStripMenuItem добавитьТолькоСМаркойToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem добавитьТолькоЦилиндрыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem добавитьМаркуИМощностьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem добавитьМаркуИЦилиндрыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem добавитьЦилиндрыИМощьностьToolStripMenuItem;
     }
 }
 

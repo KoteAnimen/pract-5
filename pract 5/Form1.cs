@@ -21,7 +21,8 @@ namespace pract_5
         private void AddButton_Click(object sender, EventArgs e)
         {
             Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
-            listBox.Items.Add("" + car.MarkAuto + " " + car.CountCylinders.ToString() + " " + car.Power.ToString());
+            string txt = car.SetParams(car);
+            listBox.Items.Add(txt);
         }
     }
 }

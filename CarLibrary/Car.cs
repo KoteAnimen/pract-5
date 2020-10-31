@@ -55,5 +55,37 @@ namespace CarLibrary
             Power = powerAuto;
         }
 
+        public string SetParams(Car car)
+        {
+            MarkAuto = car.MarkAuto;
+            CountCylinders = car.CountCylinders;
+            Power = car.Power;
+            return "Машина марки " + car.MarkAuto + " с количеством цилиндров " + car.CountCylinders.ToString() + " мощностью " + car.Power.ToString() + " лошадей";
+        }
+
+        public string SetParams(string mark)
+        {
+            MarkAuto = mark;
+            
+            return "Машина марки " + MarkAuto ;
+        }
+
+        public string SetParams(int cylinders)
+        {
+            CountCylinders = cylinders;            
+            return "Количество цилиндров " + CountCylinders.ToString();
+        }
+
+        //public string SetParams(int powerAuto)
+        //{
+        //    Power = powerAuto;
+        //    return "Мощность " + Power.ToString() + " лошадей";
+        //}
+        public string SetParams(string mark, int cylinders)
+        {
+            MarkAuto = mark;
+            CountCylinders = cylinders;
+            return "Машина марки " + MarkAuto + " с количеством цилиндров " + CountCylinders.ToString();
+        }
     }
 }
