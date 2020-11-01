@@ -24,5 +24,23 @@ namespace pract_5
             string txt = car.SetParams(car);
             listBox.Items.Add(txt);
         }
+
+        private void ChangeButton_Click(object sender, EventArgs e)
+        {
+            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
+            listBox.Items[listBox.SelectedIndex] = car.SetParams(car);
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                listBox.Items.RemoveAt(listBox.SelectedIndex);
+            }
+            catch
+            {
+                MessageBox.Show("Элемент списка не выбран");
+            }
+        }
     }
 }

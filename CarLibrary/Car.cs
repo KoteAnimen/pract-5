@@ -65,8 +65,7 @@ namespace CarLibrary
 
         public string SetParams(string mark)
         {
-            MarkAuto = mark;
-            
+            MarkAuto = mark;            
             return "Машина марки " + MarkAuto ;
         }
 
@@ -75,17 +74,33 @@ namespace CarLibrary
             CountCylinders = cylinders;            
             return "Количество цилиндров " + CountCylinders.ToString();
         }
-
-        //public string SetParams(int powerAuto)
-        //{
-        //    Power = powerAuto;
-        //    return "Мощность " + Power.ToString() + " лошадей";
-        //}
+        
         public string SetParams(string mark, int cylinders)
         {
             MarkAuto = mark;
             CountCylinders = cylinders;
             return "Машина марки " + MarkAuto + " с количеством цилиндров " + CountCylinders.ToString();
         }
+
+        public string SetParams(int cylinders, int power)
+        {
+            CountCylinders = cylinders;
+            Power = power;
+            return " Количество цилиндров " + CountCylinders.ToString() + " мощностью " + Power.ToString() + " лошадей";
+        }
+
+        public string SetParams(int power, string mark)
+        {
+            MarkAuto = mark;            
+            Power = power;
+            return "Машина марки " + MarkAuto + " мощностью " + Power.ToString() + " лошадей";
+        }
+
+
+        //public string SetParams(int powerAuto)
+        //{
+        //    Power = powerAuto;
+        //    return "Мощность " + Power.ToString() + " лошадей";
+        //}
     }
 }
