@@ -80,5 +80,15 @@ namespace pract_5
             Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
             listBox.Items.Add(car.SetParams((int)countCylinders.Value, (int)powerAuto.Value));
         }
+
+        private void AboutUs_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Филяк ИСП-31, вариант 1. Создать базовый класс Саr (машина), характеризуемый торговой маркой (строка), числом цилиндров, мощностью. Создать необходимые методы и свойства. Создать перегруженные методы SetParams, для установки параметров автомобиля. ");
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
