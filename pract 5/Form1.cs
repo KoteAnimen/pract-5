@@ -27,8 +27,16 @@ namespace pract_5
 
         private void ChangeButton_Click(object sender, EventArgs e)
         {
-            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
-            listBox.Items[listBox.SelectedIndex] = car.SetParams(car);
+            try
+            {
+                Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
+                listBox.Items[listBox.SelectedIndex] = car.SetParams(car);
+            }
+            catch
+            {
+                MessageBox.Show("Элемент списка не выбран");
+            }
+            
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
@@ -41,6 +49,36 @@ namespace pract_5
             {
                 MessageBox.Show("Элемент списка не выбран");
             }
+        }
+
+        private void AddOnlyMark_Click(object sender, EventArgs e)
+        {
+            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
+            listBox.Items.Add(car.SetParams(markAuto.Text));
+        }
+
+        private void AddOnlyCylinders_Click(object sender, EventArgs e)
+        {
+            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
+            listBox.Items.Add(car.SetParams((int)countCylinders.Value));
+        }
+
+        private void AddMarkPower_Click(object sender, EventArgs e)
+        {
+            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
+            listBox.Items.Add(car.SetParams((int)powerAuto.Value, markAuto.Text));
+        }
+
+        private void AddMarkCylinders_Click(object sender, EventArgs e)
+        {
+            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
+            listBox.Items.Add(car.SetParams(markAuto.Text, (int)countCylinders.Value));
+        }
+
+        private void AddCylindersPower_Click(object sender, EventArgs e)
+        {
+            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
+            listBox.Items.Add(car.SetParams((int)countCylinders.Value, (int)powerAuto.Value));
         }
     }
 }

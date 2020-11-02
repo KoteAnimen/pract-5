@@ -94,13 +94,6 @@ namespace CarLibrary
             MarkAuto = mark;            
             Power = power;
             return "Машина марки " + MarkAuto + " мощностью " + Power.ToString() + " лошадей";
-        }
-
-
-        //public string SetParams(int powerAuto)
-        //{
-        //    Power = powerAuto;
-        //    return "Мощность " + Power.ToString() + " лошадей";
-        //}
+        }        
     }
 }

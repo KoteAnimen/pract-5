@@ -30,11 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьТолькоСМаркойToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьТолькоЦилиндрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьМаркуИМощностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьМаркуИЦилиндрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьЦилиндрыИМощьностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddOnlyMark = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddOnlyCylinders = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddMarkPower = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddMarkCylinders = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddCylindersPower = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutUs = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox = new System.Windows.Forms.ListBox();
@@ -71,44 +71,49 @@
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьТолькоСМаркойToolStripMenuItem,
-            this.добавитьТолькоЦилиндрыToolStripMenuItem,
-            this.добавитьМаркуИМощностьToolStripMenuItem,
-            this.добавитьМаркуИЦилиндрыToolStripMenuItem,
-            this.добавитьЦилиндрыИМощьностьToolStripMenuItem});
+            this.AddOnlyMark,
+            this.AddOnlyCylinders,
+            this.AddMarkPower,
+            this.AddMarkCylinders,
+            this.AddCylindersPower});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
-            // добавитьТолькоСМаркойToolStripMenuItem
+            // AddOnlyMark
             // 
-            this.добавитьТолькоСМаркойToolStripMenuItem.Name = "добавитьТолькоСМаркойToolStripMenuItem";
-            this.добавитьТолькоСМаркойToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.добавитьТолькоСМаркойToolStripMenuItem.Text = "Добавить только с маркой";
+            this.AddOnlyMark.Name = "AddOnlyMark";
+            this.AddOnlyMark.Size = new System.Drawing.Size(260, 22);
+            this.AddOnlyMark.Text = "Добавить только с маркой";
+            this.AddOnlyMark.Click += new System.EventHandler(this.AddOnlyMark_Click);
             // 
-            // добавитьТолькоЦилиндрыToolStripMenuItem
+            // AddOnlyCylinders
             // 
-            this.добавитьТолькоЦилиндрыToolStripMenuItem.Name = "добавитьТолькоЦилиндрыToolStripMenuItem";
-            this.добавитьТолькоЦилиндрыToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.добавитьТолькоЦилиндрыToolStripMenuItem.Text = "Добавить только цилиндры";
+            this.AddOnlyCylinders.Name = "AddOnlyCylinders";
+            this.AddOnlyCylinders.Size = new System.Drawing.Size(260, 22);
+            this.AddOnlyCylinders.Text = "Добавить только цилиндры";
+            this.AddOnlyCylinders.Click += new System.EventHandler(this.AddOnlyCylinders_Click);
             // 
-            // добавитьМаркуИМощностьToolStripMenuItem
+            // AddMarkPower
             // 
-            this.добавитьМаркуИМощностьToolStripMenuItem.Name = "добавитьМаркуИМощностьToolStripMenuItem";
-            this.добавитьМаркуИМощностьToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.добавитьМаркуИМощностьToolStripMenuItem.Text = "Добавить марку и мощность";
+            this.AddMarkPower.Name = "AddMarkPower";
+            this.AddMarkPower.Size = new System.Drawing.Size(260, 22);
+            this.AddMarkPower.Text = "Добавить марку и мощность";
+            this.AddMarkPower.Click += new System.EventHandler(this.AddMarkPower_Click);
             // 
-            // добавитьМаркуИЦилиндрыToolStripMenuItem
+            // AddMarkCylinders
             // 
-            this.добавитьМаркуИЦилиндрыToolStripMenuItem.Name = "добавитьМаркуИЦилиндрыToolStripMenuItem";
-            this.добавитьМаркуИЦилиндрыToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.добавитьМаркуИЦилиндрыToolStripMenuItem.Text = "Добавить марку и цилиндры";
+            this.AddMarkCylinders.Name = "AddMarkCylinders";
+            this.AddMarkCylinders.Size = new System.Drawing.Size(260, 22);
+            this.AddMarkCylinders.Text = "Добавить марку и цилиндры";
+            this.AddMarkCylinders.Click += new System.EventHandler(this.AddMarkCylinders_Click);
             // 
-            // добавитьЦилиндрыИМощьностьToolStripMenuItem
+            // AddCylindersPower
             // 
-            this.добавитьЦилиндрыИМощьностьToolStripMenuItem.Name = "добавитьЦилиндрыИМощьностьToolStripMenuItem";
-            this.добавитьЦилиндрыИМощьностьToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
-            this.добавитьЦилиндрыИМощьностьToolStripMenuItem.Text = "Добавить цилиндры и мощность ";
+            this.AddCylindersPower.Name = "AddCylindersPower";
+            this.AddCylindersPower.Size = new System.Drawing.Size(260, 22);
+            this.AddCylindersPower.Text = "Добавить цилиндры и мощность ";
+            this.AddCylindersPower.Click += new System.EventHandler(this.AddCylindersPower_Click);
             // 
             // AboutUs
             // 
@@ -284,11 +289,11 @@
         private System.Windows.Forms.NumericUpDown countCylinders;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox markAuto;
-        private System.Windows.Forms.ToolStripMenuItem добавитьТолькоСМаркойToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem добавитьТолькоЦилиндрыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem добавитьМаркуИМощностьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem добавитьМаркуИЦилиндрыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem добавитьЦилиндрыИМощьностьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddOnlyMark;
+        private System.Windows.Forms.ToolStripMenuItem AddOnlyCylinders;
+        private System.Windows.Forms.ToolStripMenuItem AddMarkPower;
+        private System.Windows.Forms.ToolStripMenuItem AddMarkCylinders;
+        private System.Windows.Forms.ToolStripMenuItem AddCylindersPower;
     }
 }
 
