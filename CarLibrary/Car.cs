@@ -8,88 +8,46 @@ namespace CarLibrary
 {
     public class Car
     {
-        string markAuto;
-        int countCylinders;
-        int power;
+        public static string MarkAuto { get; set; }
+        public static int CountCylinders { get; set; }
+        public static int Power { get; set; }        
 
-        public string MarkAuto
-        {
-            get
-            {
-                return markAuto;
-            }
-            set
-            {
-                markAuto = value;
-            }
-        }
-
-        public int CountCylinders
-        {
-            get
-            {
-                return countCylinders;
-            }
-            set
-            {
-                if (value > 0) countCylinders = value;
-            }
-        }
-
-        public int Power
-        {
-            get
-            {
-                return power;
-            }
-            set
-            {
-                if (value > 0) power = value;
-            }
-        }
-
-        public Car(string mark, int cylinders, int powerAuto)
+        
+        public static string SetParams(string mark, int cylinders, int power) //функция установки параметров автомобиля(марка, цилиндры, мощность). 
         {
             MarkAuto = mark;
             CountCylinders = cylinders;
-            Power = powerAuto;
+            Power = power;
+            return "Машина марки " + MarkAuto + " с количеством цилиндров " + CountCylinders.ToString() + " мощностью " + Power.ToString() + " лошадей";
         }
 
-        public string SetParams(Car car)
-        {
-            MarkAuto = car.MarkAuto;
-            CountCylinders = car.CountCylinders;
-            Power = car.Power;
-            return "Машина марки " + car.MarkAuto + " с количеством цилиндров " + car.CountCylinders.ToString() + " мощностью " + car.Power.ToString() + " лошадей";
-        }
-
-        public string SetParams(string mark)
+        public static string SetParams(string mark) //перегрузка функции SetParams с аргументом марка.
         {
             MarkAuto = mark;            
             return "Машина марки " + MarkAuto ;
         }
-
-        public string SetParams(int cylinders)
+        // остальные перегрузки функции SetParams()
+        public static string SetParams(int cylinders)
         {
             CountCylinders = cylinders;            
             return "Количество цилиндров " + CountCylinders.ToString();
         }
         
-        public string SetParams(string mark, int cylinders)
+        public static string SetParams(string mark, int cylinders)
         {
             MarkAuto = mark;
             CountCylinders = cylinders;
             return "Машина марки " + MarkAuto + " с количеством цилиндров " + CountCylinders.ToString();
         }
 
-        public string SetParams(int cylinders, int power)
+        public static string SetParams(int cylinders, int power)
         {
             CountCylinders = cylinders;
             Power = power;
             return " Количество цилиндров " + CountCylinders.ToString() + " мощностью " + Power.ToString() + " лошадей";
         }
 
-        public string SetParams(int power, string mark)
+        public static string SetParams(int power, string mark)
         {
             MarkAuto = mark;            
             Power = power;

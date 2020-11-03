@@ -49,6 +49,7 @@
             this.countCylinders = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.markAuto = new System.Windows.Forms.TextBox();
+            this.ClearList = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -125,7 +126,7 @@
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(53, 20);
+            this.Exit.Size = new System.Drawing.Size(54, 20);
             this.Exit.Text = "Выход";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -150,6 +151,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.ClearList);
             this.groupBox2.Controls.Add(this.ChangeButton);
             this.groupBox2.Controls.Add(this.DeleteButton);
             this.groupBox2.Controls.Add(this.AddButton);
@@ -168,7 +170,7 @@
             // 
             // ChangeButton
             // 
-            this.ChangeButton.Location = new System.Drawing.Point(121, 338);
+            this.ChangeButton.Location = new System.Drawing.Point(121, 310);
             this.ChangeButton.Name = "ChangeButton";
             this.ChangeButton.Size = new System.Drawing.Size(80, 25);
             this.ChangeButton.TabIndex = 8;
@@ -178,7 +180,7 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(35, 369);
+            this.DeleteButton.Location = new System.Drawing.Point(35, 341);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(166, 25);
             this.DeleteButton.TabIndex = 7;
@@ -188,7 +190,7 @@
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(35, 338);
+            this.AddButton.Location = new System.Drawing.Point(35, 310);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(80, 25);
             this.AddButton.TabIndex = 6;
@@ -249,6 +251,16 @@
             this.markAuto.Size = new System.Drawing.Size(156, 20);
             this.markAuto.TabIndex = 0;
             // 
+            // ClearList
+            // 
+            this.ClearList.Location = new System.Drawing.Point(35, 372);
+            this.ClearList.Name = "ClearList";
+            this.ClearList.Size = new System.Drawing.Size(166, 25);
+            this.ClearList.TabIndex = 9;
+            this.ClearList.Text = "Очистить список";
+            this.ClearList.UseVisualStyleBackColor = true;
+            this.ClearList.Click += new System.EventHandler(this.ClearList_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,6 +308,7 @@
         private System.Windows.Forms.ToolStripMenuItem AddMarkPower;
         private System.Windows.Forms.ToolStripMenuItem AddMarkCylinders;
         private System.Windows.Forms.ToolStripMenuItem AddCylindersPower;
+        private System.Windows.Forms.Button ClearList;
     }
 }
 

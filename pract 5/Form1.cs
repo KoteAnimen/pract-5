@@ -20,8 +20,7 @@ namespace pract_5
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
-            string txt = car.SetParams(car);
+            string txt = Car.SetParams(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
             listBox.Items.Add(txt);
         }
 
@@ -29,14 +28,12 @@ namespace pract_5
         {
             try
             {
-                Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
-                listBox.Items[listBox.SelectedIndex] = car.SetParams(car);
+                listBox.Items[listBox.SelectedIndex] = Car.SetParams(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
             }
             catch
             {
                 MessageBox.Show("Элемент списка не выбран");
-            }
-            
+            }            
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
@@ -53,32 +50,27 @@ namespace pract_5
 
         private void AddOnlyMark_Click(object sender, EventArgs e)
         {
-            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
-            listBox.Items.Add(car.SetParams(markAuto.Text));
+            listBox.Items.Add(Car.SetParams(markAuto.Text));
         }
 
         private void AddOnlyCylinders_Click(object sender, EventArgs e)
         {
-            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
-            listBox.Items.Add(car.SetParams((int)countCylinders.Value));
+            listBox.Items.Add(Car.SetParams((int)countCylinders.Value));
         }
 
         private void AddMarkPower_Click(object sender, EventArgs e)
         {
-            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
-            listBox.Items.Add(car.SetParams((int)powerAuto.Value, markAuto.Text));
+            listBox.Items.Add(Car.SetParams((int)powerAuto.Value, markAuto.Text));
         }
 
         private void AddMarkCylinders_Click(object sender, EventArgs e)
         {
-            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
-            listBox.Items.Add(car.SetParams(markAuto.Text, (int)countCylinders.Value));
+            listBox.Items.Add(Car.SetParams(markAuto.Text, (int)countCylinders.Value));
         }
 
         private void AddCylindersPower_Click(object sender, EventArgs e)
         {
-            Car car = new Car(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
-            listBox.Items.Add(car.SetParams((int)countCylinders.Value, (int)powerAuto.Value));
+            listBox.Items.Add(Car.SetParams((int)countCylinders.Value, (int)powerAuto.Value));
         }
 
         private void AboutUs_Click(object sender, EventArgs e)
@@ -89,6 +81,11 @@ namespace pract_5
         private void Exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ClearList_Click(object sender, EventArgs e)
+        {
+            listBox.Items.Clear();
         }
     }
 }
