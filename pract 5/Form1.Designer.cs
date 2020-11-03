@@ -231,9 +231,19 @@
             // countCylinders
             // 
             this.countCylinders.Location = new System.Drawing.Point(6, 99);
+            this.countCylinders.Minimum = new decimal(new int[] {
+            14,
+            0,
+            0,
+            0});
             this.countCylinders.Name = "countCylinders";
             this.countCylinders.Size = new System.Drawing.Size(156, 20);
             this.countCylinders.TabIndex = 2;
+            this.countCylinders.Value = new decimal(new int[] {
+            14,
+            0,
+            0,
+            0});
             // 
             // label1
             // 
