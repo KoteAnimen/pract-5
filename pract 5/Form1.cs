@@ -20,15 +20,17 @@ namespace pract_5
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            string txt = Car.SetParams(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
+            Car car = new Car();
+            string txt = car.SetParams(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
             listBox.Items.Add(txt);
         }
 
         private void ChangeButton_Click(object sender, EventArgs e)
         {
+            Car car = new Car();
             try
             {
-                listBox.Items[listBox.SelectedIndex] = Car.SetParams(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
+                listBox.Items[listBox.SelectedIndex] = car.SetParams(markAuto.Text, (int)countCylinders.Value, (int)powerAuto.Value);
             }
             catch
             {
@@ -50,27 +52,32 @@ namespace pract_5
 
         private void AddOnlyMark_Click(object sender, EventArgs e)
         {
-            listBox.Items.Add(Car.SetParams(markAuto.Text));
+            Car car = new Car();
+            listBox.Items.Add(car.SetParams(markAuto.Text));
         }
 
         private void AddOnlyCylinders_Click(object sender, EventArgs e)
         {
-            listBox.Items.Add(Car.SetParams((int)countCylinders.Value));
+            Car car = new Car();
+            listBox.Items.Add(car.SetParams((int)countCylinders.Value));
         }
 
         private void AddMarkPower_Click(object sender, EventArgs e)
         {
-            listBox.Items.Add(Car.SetParams((int)powerAuto.Value, markAuto.Text));
+            Car car = new Car();
+            listBox.Items.Add(car.SetParams((int)powerAuto.Value, markAuto.Text));
         }
 
         private void AddMarkCylinders_Click(object sender, EventArgs e)
         {
-            listBox.Items.Add(Car.SetParams(markAuto.Text, (int)countCylinders.Value));
+            Car car = new Car();
+            listBox.Items.Add(car.SetParams(markAuto.Text, (int)countCylinders.Value));
         }
 
         private void AddCylindersPower_Click(object sender, EventArgs e)
         {
-            listBox.Items.Add(Car.SetParams((int)countCylinders.Value, (int)powerAuto.Value));
+            Car car = new Car();
+            listBox.Items.Add(car.SetParams((int)countCylinders.Value, (int)powerAuto.Value));
         }
 
         private void AboutUs_Click(object sender, EventArgs e)
