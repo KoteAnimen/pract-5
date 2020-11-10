@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddOnlyMark = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +41,7 @@
             this.listBox = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ClearList = new System.Windows.Forms.Button();
             this.ChangeButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
@@ -49,7 +51,6 @@
             this.countCylinders = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.markAuto = new System.Windows.Forms.TextBox();
-            this.ClearList = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -168,6 +169,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Параметры автомобиля";
             // 
+            // ClearList
+            // 
+            this.ClearList.Location = new System.Drawing.Point(35, 372);
+            this.ClearList.Name = "ClearList";
+            this.ClearList.Size = new System.Drawing.Size(166, 25);
+            this.ClearList.TabIndex = 9;
+            this.ClearList.Text = "Очистить список";
+            this.ClearList.UseVisualStyleBackColor = true;
+            this.ClearList.Click += new System.EventHandler(this.ClearList_Click);
+            // 
             // ChangeButton
             // 
             this.ChangeButton.Location = new System.Drawing.Point(121, 310);
@@ -261,16 +272,6 @@
             this.markAuto.Size = new System.Drawing.Size(156, 20);
             this.markAuto.TabIndex = 0;
             // 
-            // ClearList
-            // 
-            this.ClearList.Location = new System.Drawing.Point(35, 372);
-            this.ClearList.Name = "ClearList";
-            this.ClearList.Size = new System.Drawing.Size(166, 25);
-            this.ClearList.TabIndex = 9;
-            this.ClearList.Text = "Очистить список";
-            this.ClearList.UseVisualStyleBackColor = true;
-            this.ClearList.Click += new System.EventHandler(this.ClearList_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +280,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
