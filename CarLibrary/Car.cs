@@ -52,6 +52,28 @@ namespace CarLibrary
             MarkAuto = mark;            
             Power = power;
             return "Машина марки " + MarkAuto + " мощностью " + Power.ToString() + " лошадей";
-        }        
+        }
+        
+        public static string operator <(Car car1, Car car2)
+        {
+            if(car1.CountCylinders < car2.CountCylinders)
+            {
+                if(car1.Power < car2.Power)
+                {
+                    return car1.MarkAuto + "круче чем " + car2.MarkAuto;
+                }                         
+                
+            }
+        }
+        public static string operator >(Car car1, Car car2)
+        {
+            if (car1.CountCylinders > car2.CountCylinders)
+            {
+                if (car1.Power > car2.Power)
+                {
+                    return car2.MarkAuto + "круче чем " + car1.MarkAuto;
+                }                                  
+            }
+        }
     }
 }
